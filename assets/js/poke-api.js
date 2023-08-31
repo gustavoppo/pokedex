@@ -10,7 +10,7 @@ function convertPokeApiDetailsToPokemon(pokeApiDetails) {
     const[type] = pokemonTypes
 
     pokemon.types = pokemonTypes
-    pokemon.type = pokemonTypes
+    pokemon.type = type
 
     return pokemon
 }
