@@ -1,0 +1,38 @@
+@import '/assets/css/pokedex.css';
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.pagination {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.pagination button {
+ background-color: #6c79db;
+ border: none;
+ border-radius: 1rem;
+ color: white;
+ padding: .5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Pokedex</title>
     <link rel="stylesheet" href="assets/css/pokedex.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,10 +23,12 @@
   <body>
     <section class="content">
       <h1>Pokedex</h1>
-
       <ol id="pokemonList" class="pokemons grid">
-        
       </ol>
+
+      <div class="pagination">
+        <button id="loadMore" type="button">Load More</button>
+      </div>
     </section>
   </body>
   <script src="assets/js/pokemon-model.js"></script>
