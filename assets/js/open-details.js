@@ -9,7 +9,7 @@ function createTypeElements(types) {
 function createAbilityElements(abilities) {
   return abilities
     .map((ability) => `<li class="abilities">${ability}</li>`)
-    .join( "," + " ");
+    .join("," + " ");
 }
 
 function createStatElements(stats) {
@@ -33,8 +33,11 @@ function createStatBarElements(statsInfo) {
 
 function convertPokeApiDetailsToPokemons(pokemon) {
   return `
-  <span class="close-modal"  onclick="toggleModal()"></span>
+  <span class="close-modal" onclick="toggleModal()"></span>
   <div class="modal-content ${pokemon.type}">
+  <span class="material-symbols-rounded back-page" onclick="toggleModal()">
+    arrow_back
+  </span>
     <span class="title-modal">
      <span class="pokemon-details-modal">
       <h1 class="pokemon-name-modal">${pokemon.name}</h1>

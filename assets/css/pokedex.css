@@ -170,3 +170,15 @@
   object-fit: fill;
   background-repeat: no-repeat, repeat;
 }
+
+@media screen and (max-width: 576px) {
+  .type{
+    font-size: .825rem;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 1200px) {
+}
