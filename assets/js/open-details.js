@@ -9,11 +9,15 @@ function createTypeElements(types) {
 function createAbilityElements(abilities) {
   return abilities
     .map((ability) => `<li class="abilities">${ability}</li>`)
-    .join("");
+    .join( "," + " ");
 }
 
 function createStatElements(stats) {
   return stats.map((stat) => `<li class="stats">${stat}</li>`).join("");
+}
+
+function createStatPointsElements(stats) {
+  return stats.map((stat) => `<li class="points">${stat}</li>`).join("");
 }
 
 function createStatBarElements(statsInfo) {
@@ -29,6 +33,7 @@ function createStatBarElements(statsInfo) {
 
 function convertPokeApiDetailsToPokemons(pokemon) {
   return `
+  <span class="close-modal"  onclick="toggleModal()"></span>
   <div class="modal-content ${pokemon.type}">
     <span class="title-modal">
      <span class="pokemon-details-modal">
@@ -63,8 +68,8 @@ function convertPokeApiDetailsToPokemons(pokemon) {
           <ol class="pokemon-stats">
             ${createStatElements(pokemon.stats)}
           </ol>
-          <ol class="pokemon-stats">
-            ${createStatElements(pokemon.statsInfo)}
+          <ol class="pokemon-stats points">
+            ${createStatPointsElements(pokemon.statsInfo)}
           </ol>
         </div>
         <ol class="pokemon-skills">
@@ -90,11 +95,11 @@ function openDetails(id) {
         if (statValue <= 25) {
           span.style.background = "#dd2828";
         } else if (statValue > 25 && statValue <= 50) {
-          span.style.background = "#fd5826" ;
+          span.style.background = "#fd5826";
         } else {
-          span.style.background = "#0fbb14"; 
+          span.style.background = "#0fbb14";
         }
-        
+
         span.style.display = "block";
         span.style.width = statValue + "%";
         span.style.height = "100%";
@@ -104,4 +109,9 @@ function openDetails(id) {
   }
 }
 
+function toggleModal() {
+  modal.classList.toggle("modal-show");
+}
+
 openDetails(1);
+closeModal();
