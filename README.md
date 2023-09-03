@@ -17,7 +17,7 @@ Este projeto é baseado em uma Pokedex, que mostra todos os Pokemons da primeira
 ![Tela da pokedex contendo os pokemons: Bulbasaur, Ivysaur, Venusaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Caterpie, e um botão para carregar mais pokemons](./assets/img-pokedex/repositorio.png)
 
 ## Sobre o desafio
-Basedo no [repositório ](https://github.com/digitalinnovationone/js-developer-pokedex) disponibilizado pelo professor [Renan Johannsen](https://www.linkedin.com/in/renanjpaula/), o desafio proposto consiste no desenvolvimento de uma nova janela onde é apresendado maiores detalhes do pokemon selecionado.
+Baseado no [repositório ](https://github.com/digitalinnovationone/js-developer-pokedex) disponibilizado pelo professor [Renan Johannsen](https://www.linkedin.com/in/renanjpaula/), o desafio proposto consiste no desenvolvimento de uma nova janela onde é apresentado  maiores detalhes do Pokémon selecionado.
 
 * **Para isso, foi necessário:**
 
