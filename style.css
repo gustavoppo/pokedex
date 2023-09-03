@@ -1,33 +1,257 @@
-@import '/assets/css/pokedex.css';
+@import "/assets/css/pokedex.css";
 
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background: #e3e3e3;
+}
+
+.card {
+  background-color: #efefef;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.title-page {
+  color: #393939;
+  font-size: 4rem;
+  margin: 0 !important;
+  padding-bottom: 1rem;
 }
 
 .content {
-  padding: 1rem;
+  margin-top: 2rem !important;
+  position: relative;
+  overflow: overlay;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .pagination {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
 }
+
 .pagination button {
- background-color: #6c79db;
- border: none;
- border-radius: 1rem;
- color: white;
- padding: .5rem;
+  border-radius: 1rem;
+  color: #393939;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.btn:hover {
+  background: #e3e3e3;
+  width: 20%;
+  transition: all 0.3s cubic-bezier(0, 0, 0, 1.12);
+}
+
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  top: 2px;
+}
+
+.back-top {
+  filter: opacity(0.5);
+  position: absolute;
+  right: -13%;
+  top: -24%;
+  height: 50%;
+}
+
+.back-bottom {
+  filter: opacity(0.5);
+  position: absolute;
+  left: -13%;
+  bottom: -24%;
+  height: 50%;
+}
+
+.border {
+  border: #0000001f 3px solid;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-show {
+  display: block !important;
+}
+
+.modal-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  max-width: 35rem;
+  max-height: 40rem;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.title-modal {
+  top: 2rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pokemon-id-modal {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pokemon-name-modal {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pokemon-name-modal::first-letter {
+  text-transform: uppercase;
+}
+
+.card-datails {
+  background: white;
+  border-radius: 1rem;
+}
+
+.pokemon-img-modal {
+  filter: drop-shadow(0px 0px 6px #0000003b);
+  height: 15rem;
+  position: relative;
+  top: 2rem;
+}
+
+.pokemon-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stats {
+  font-weight: bold; 
+  color: #00000052;
+}
+
+.stats::first-letter {
+  text-transform: uppercase;  
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.back-modal {
+  filter: opacity(0.5);
+  position: absolute;
+  right: -20%;
+  top: -21%;
+  height: 27rem;
+  transform: rotate(-23deg);
+  z-index: -1;
+}
+
+.modal-types {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.modal-type {
+  font-size: medium;
+  font-weight: bold;
+  background-color: #ffffff4f;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  color: white;
+  margin-inline: 0.5rem;
+}
+
+.pokemon-details-modal {
+  padding-right: 2rem;
+}
+
+.pokemon-abilities {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.abilities {
+  font-weight: bold;
+  color: #393939;
+  margin-left: 6px;
+}
+
+.abilities::first-letter {
+  text-transform: uppercase;
+}
+
+.title-abilities {
+  color: #00000052;
 }
 
 @media screen and (min-width: 992px) {

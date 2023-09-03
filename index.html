@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="assets/css/pokedex.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="assets/css/pokedex.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,16 +22,33 @@
     />
   </head>
   <body>
-    <section class="content">
-      <h1>Pokedex</h1>
-      <ol id="pokemonList" class="pokemons grid">
-      </ol>
-
+    <section class="content card">
+      <img
+        class="back-top"
+        src="./assets/img/background.png"
+        alt="Imagem de fundo um formato de uma pokebola"
+      />
+      <img
+        class="back-bottom"
+        src="./assets/img/background.png"
+        alt="Imagem de fundo um formato de uma pokebola"
+      />
+      <h1 class="title-page">Pokedex</h1>
+      <ol id="pokemonList" class="pokemons grid"></ol>
       <div class="pagination">
-        <button id="loadMore" type="button">Load More</button>
+        <button class="custom-btn btn border" id="loadMore" type="button">
+          Load More
+        </button>
       </div>
     </section>
+
+    <div id="pokemonDetail" class="modal" onclick="toggleModal()">
+      <span class="close-button">&times;</span>
+    </div>
+
   </body>
+
+  <script src="assets/js/open-details.js"></script>
   <script src="assets/js/pokemon-model.js"></script>
   <script src="assets/js/poke-api.js"></script>
   <script src="assets/js/main.js"></script>
