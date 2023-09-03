@@ -1,9 +1,7 @@
 const pokeApi = {};
 
 function convertPokeApiDetailsToPokemon(pokeApiDetails) {
-  console.log(pokeApiDetails)
   const pokemon = new Pokemon();
-
   const pokemonTypes = pokeApiDetails.types.map(
     (typeSlot) => typeSlot.type.name
   );
