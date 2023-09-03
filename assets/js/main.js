@@ -5,24 +5,26 @@ const limit = 10;
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
-  return `<li onclick="openDetails(${pokemon.id})" class="pokemon border ${pokemon.type}">
-  <div class="title-card">
-    <span class="pokemon-name">${pokemon.name}</span>
-    <span class="pokemon-id">#${pokemon.id}</span>
-  </div>
+  return `
+  <li onclick="openDetails(${pokemon.id})" class="pokemon border ${pokemon.type}">
+    <div class="title-card">
+      <span class="pokemon-name">${pokemon.name}</span>
+      <span class="pokemon-id">#${pokemon.id}</span>
+    </div>
 
-  <div class="pokemon-datails">
-    <ol class="pokemon-types">
-      ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join("")}
-    </ol>
-    <img
-      class="img-pokemon"
-      src="assets/img/${pokemon.name}.png"
-      alt="${pokemon.name}"
-    />
-  </div>
-  <span class="background-pokemon">
-</li>`;
+    <div class="pokemon-datails">
+      <ol class="pokemon-types">
+        ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join("")}
+      </ol>
+      
+      <img
+        class="img-pokemon"
+        src="assets/img/${pokemon.name}.png"
+        alt="${pokemon.name}"
+      />
+    </div>
+    <span class="background-pokemon">
+  </li>`;
 }
 
 function loadPokemonItens(offset, limit) {
